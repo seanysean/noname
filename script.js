@@ -1,11 +1,8 @@
 var box = document.getElementsByClassName("box")[0];
 var button = document.getElementById("test");
-var clicked = 0;
 button.addEventListener("click",function() {
-  clicked = 1;
+  sessionStorage.setItem("color", "#888");
 });
 setInterval(function() {
-  if (clicked === 1) {
-    box.style.background = "#888";
-  }
+  box.style.background = sessionStorage.getItem("color");
 }, 500);
