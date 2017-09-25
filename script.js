@@ -4,6 +4,8 @@ var clicked = 0;
 button.addEventListener("click",function() {
   clicked = 1;
 });
-if (clicked === 1) {
-  box.style.background = "#888";
-}
+setInterval(function() {
+  if (clicked === 1) {
+    box.style.background = "#888";
+  }
+}, 500);
